@@ -1,8 +1,8 @@
-# Detection 01 — Brute Force Login Detection 🔴
+# Detection 01: Brute Force Login Detection 
 
 ## Overview
 Detects multiple failed login attempts from 
-the same source — indicating potential brute 
+the same source indicating potential brute 
 force or credential stuffing attack.
 
 ## Metadata
@@ -10,8 +10,8 @@ force or credential stuffing attack.
 |-------|---------|
 | Detection ID | DET-001 |
 | Severity | High |
-| MITRE ATT&CK | T1110 — Brute Force |
-| Event ID | 4625 — Failed Logon |
+| MITRE ATT&CK | T1110 , Brute Force |
+| Event ID | 4625 , Failed Logon |
 | Data Source | Windows Security Log |
 | Author | Nish |
 | Date | September 2026 |
