@@ -21,10 +21,10 @@ force or credential stuffing attack.
 ## MITRE ATT&CK Mapping
 
 Tactic: Credential Access
-Technique: T1110 — Brute Force
-Sub-tech: T1110.001 — Password Guessing
-T1110.003 — Password Spraying
-T1110.004 — Credential Stuffing
+Technique: T1110: Brute Force
+Sub-tech: T1110.001: Password Guessing
+T1110.003: Password Spraying
+T1110.004: Credential Stuffing
 
 
 ---
@@ -91,10 +91,10 @@ DESKTOP-6M26L0E$ 127.0.0.1 4
               127.0.0.1   4
 
 Analysis:
-├── Source: 127.0.0.1 (loopback/local)
-├── Logon Type: 2 (Interactive)
-├── Failure Reason: Error during logon
-└── Timeframe: Multiple attempts within
+Source: 127.0.0.1 (loopback/local)
+Logon Type: 2 (Interactive)
+Failure Reason: Error during logon
+Timeframe: Multiple attempts within
 minutes of each other
 
 
@@ -151,15 +151,15 @@ index=main (EventCode=4625 OR EventCode=4624)
 ## False Positives
 
 Common benign causes:
-├── Service account with expired password
-├── User typing wrong password accidentally
-├── Misconfigured application
-└── Locked account being retried by service
+Service account with expired password
+User typing wrong password accidentally
+Misconfigured application
+Locked account being retried by service
 
 How to tune:
-├── Whitelist known service account IPs
-├── Increase threshold for internal IPs
-└── Create separate rule for external IPs
+Whitelist known service account IPs
+Increase threshold for internal IPs
+Create separate rule for external IPs
 with lower threshold (1-2 attempts)
 
 
@@ -168,16 +168,16 @@ with lower threshold (1-2 attempts)
 ## Recommended Response Actions
 
 LOW confidence (internal IP, low count):
-└── Monitor and document
+Monitor and document
 Check if service account issue
 
 MEDIUM confidence (internal, high count):
-└── Investigate source system
+Investigate source system
 Check for malware or misconfiguration
 Alert system owner
 
 HIGH confidence (external IP):
-└── Block source IP at firewall immediately
+Block source IP at firewall immediately
 Reset targeted account password
 Check for successful logins
 Escalate to senior analyst
