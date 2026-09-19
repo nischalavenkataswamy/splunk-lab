@@ -31,12 +31,12 @@ CrowdStrike, and Cisco.
 ```spl
 index=windows EventCode=4625
 | stats count by src_ip, user
-| where count > 10
+| where count > 3
 | sort -count
 | table src_ip, user, count
 ```
 
-**What it detects:** More than 10 failed login 
+**What it detects:** More than 3 failed login 
 attempts from the same source IP — indicates 
 brute force or credential stuffing.
 
