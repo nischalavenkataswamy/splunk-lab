@@ -40,7 +40,7 @@ index=windows EventCode=4625
 attempts from the same source IP — indicates 
 brute force or credential stuffing.
 
-![Detection Screenshot](Screenshots/brute-force-table.png)
+![Detection Screenshot](Screenshots/brute-force-table-detection.png)
 
 ---
 
