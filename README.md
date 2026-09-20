@@ -15,10 +15,14 @@ CrowdStrike, and Cisco.
 
 | Component | Details |
 |-----------|---------|
-| SIEM | Splunk Free 9.x |
-| Log Sources | Sysmon, Windows Event Logs |
-| Operating System | Windows 10 (VirtualBox VM) |
-| Detection Framework | MITRE ATT&CK |
+| SIEM | Splunk Enterprise 10.4.1 |
+| Domain | corp.local |
+| Windows Server | 2022 — Domain Controller |
+| Windows Client | Windows 10 — Domain joined |
+| Log Forwarder | Splunk Universal Forwarder |
+| Endpoint Logging | Sysmon (Windows 10) |
+| Network | 192.168.56.0/24 |
+| Splunk Web | localhost:8000 |
 
 ---
 
