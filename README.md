@@ -6,8 +6,7 @@ use cases, SPL queries, and security dashboards
 built to simulate SOC analyst workflows.
 
 Built to develop practical skills aligned with 
-SOC analyst roles at Palo Alto Networks, 
-CrowdStrike, and Cisco.
+SOC analyst, Security analyst, security engineer roles
 
 ---
 
