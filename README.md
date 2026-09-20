@@ -17,8 +17,8 @@ CrowdStrike, and Cisco.
 |-----------|---------|
 | SIEM | Splunk Enterprise 10.4.1 |
 | Domain | corp.local |
-| Windows Server | 2022 — Domain Controller |
-| Windows Client | Windows 10 — Domain joined |
+| Windows Server | 2022  Domain Controller |
+| Windows Client | Windows 10  Domain joined |
 | Log Forwarder | Splunk Universal Forwarder |
 | Endpoint Logging | Sysmon (Windows 10) |
 | Network | 192.168.56.0/24 |
@@ -29,8 +29,8 @@ CrowdStrike, and Cisco.
 ## Detection Use Cases
 
 ### 1. Brute Force Login Detection
-**MITRE ATT&CK:** T1110 — Brute Force  
-**Windows Event ID:** 4625 — Failed Logon
+**MITRE ATT&CK:** T1110  Brute Force  
+**Windows Event ID:** 4625  Failed Logon
 
 ```spl
 index=windows EventCode=4625
@@ -41,7 +41,7 @@ index=windows EventCode=4625
 ```
 
 **What it detects:** More than 3 failed login 
-attempts from the same source IP — indicates 
+attempts from the same source IP  indicates 
 brute force or credential stuffing.
 
 ![Detection Screenshot](Screenshots/brute-force-table-detection.png)
@@ -49,7 +49,7 @@ brute force or credential stuffing.
 ---
 
 ### 2. New User Account Created
-**MITRE ATT&CK:** T1136 — Create Account  
+**MITRE ATT&CK:** T1136  Create Account  
 **Windows Event ID:** 4720
 
 ```spl
@@ -65,7 +65,7 @@ after compromise.
 ---
 
 ### 3. User Added to Administrators Group
-**MITRE ATT&CK:** T1078 — Valid Accounts  
+**MITRE ATT&CK:** T1078  Valid Accounts  
 **Windows Event ID:** 4732
 
 ```spl
@@ -80,8 +80,8 @@ escalation by adding user to local admin group.
 ---
 
 ### 4. Suspicious PowerShell Execution
-**MITRE ATT&CK:** T1059.001 — PowerShell  
-**Windows Event ID:** 4104 — Script Block Logging
+**MITRE ATT&CK:** T1059.001  PowerShell  
+**Windows Event ID:** 4104  Script Block Logging
 
 ```spl
 index=windows EventCode=4104
@@ -99,7 +99,7 @@ lateral movement attacks.
 ---
 
 ### 5. Security Log Cleared
-**MITRE ATT&CK:** T1070.001 — Clear Windows Event Logs  
+**MITRE ATT&CK:** T1070.001  Clear Windows Event Logs  
 **Windows Event ID:** 1102
 
 ```spl
@@ -108,14 +108,14 @@ index=windows EventCode=1102
 | sort -_time
 ```
 
-**What it detects:** Security log deletion — 
+**What it detects:** Security log deletion  
 almost always indicates attacker covering tracks.
-This is a critical alert — investigate immediately.
+This is a critical alert  investigate immediately.
 
 ---
 
 ### 6. Scheduled Task Created
-**MITRE ATT&CK:** T1053.005 — Scheduled Task  
+**MITRE ATT&CK:** T1053.005  Scheduled Task  
 **Windows Event ID:** 4698
 
 ```spl
@@ -124,13 +124,13 @@ index=windows EventCode=4698
 | sort -_time
 ```
 
-**What it detects:** New scheduled tasks — 
+**What it detects:** New scheduled tasks  
 common malware persistence mechanism.
 
 ---
 
-### 7. Process Creation — Suspicious Parent
-**MITRE ATT&CK:** T1059 — Command Execution  
+### 7. Process Creation  Suspicious Parent
+**MITRE ATT&CK:** T1059  Command Execution  
 **Sysmon Event ID:** 1
 
 ```spl
@@ -145,13 +145,13 @@ EventCode=1
 ```
 
 **What it detects:** Office application spawning 
-PowerShell or CMD — classic malicious 
+PowerShell or CMD  classic malicious 
 macro execution pattern.
 
 ---
 
-### 8. LSASS Access — Credential Dumping
-**MITRE ATT&CK:** T1003.001 — LSASS Memory  
+### 8. LSASS Access  Credential Dumping
+**MITRE ATT&CK:** T1003.001  LSASS Memory  
 **Sysmon Event ID:** 10
 
 ```spl
@@ -163,7 +163,7 @@ EventCode=10 TargetImage="*lsass.exe*"
 ```
 
 **What it detects:** Processes accessing LSASS 
-memory — indicates credential dumping 
+memory  indicates credential dumping 
 tools like Mimikatz.
 
 ---
@@ -198,12 +198,12 @@ following panels:
 ### September 2026
 - ✅ Lab environment fully configured
 - ✅ Splunk receiving 26,000+ events
-- ✅ Detection 1 built — Brute Force Login
+- ✅ Detection 1 built  Brute Force Login
 - ✅ Troubleshot and fixed Sysmon forwarding
-- 🔄 Detection 2 in progress — PowerShell
-- ⏳ Detection 3 planned — New User Created
-- ⏳ Detection 4 planned — Privilege Escalation
-- ⏳ Detection 5 planned — LSASS Access
+- 🔄 Detection 2 in progress  PowerShell
+- ⏳ Detection 3 planned  New User Created
+- ⏳ Detection 4 planned  Privilege Escalation
+- ⏳ Detection 5 planned  LSASS Access
 - ⏳ Security Dashboard planned
 - ⏳ Kali Linux attack simulations planned
 
@@ -222,4 +222,4 @@ following panels:
 ## Certifications Supporting This Work
 - CompTIA CySA+ (CS0-003)
 - CompTIA Security+
-- MSc Cybersecurity — University of York
+- MSc Cybersecurity, University of York
