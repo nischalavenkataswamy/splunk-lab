@@ -1,4 +1,4 @@
-# Splunk SOC Detection Lab 🔍
+# Splunk SOC Detection Lab 
 
 ## Overview
 A hands-on Splunk lab documenting real detection 
@@ -188,6 +188,20 @@ following panels:
 - Identified common attacker techniques in logs
 
 ---
+
+## Progress Log
+
+### September 2026
+- ✅ Lab environment fully configured
+- ✅ Splunk receiving 26,000+ events
+- ✅ Detection 1 built — Brute Force Login
+- ✅ Troubleshot and fixed Sysmon forwarding
+- 🔄 Detection 2 in progress — PowerShell
+- ⏳ Detection 3 planned — New User Created
+- ⏳ Detection 4 planned — Privilege Escalation
+- ⏳ Detection 5 planned — LSASS Access
+- ⏳ Security Dashboard planned
+- ⏳ Kali Linux attack simulations planned
 
 ## Tools and References
 
