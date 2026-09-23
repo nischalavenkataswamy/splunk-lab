@@ -139,6 +139,11 @@ Get-Service Sysmon64
 All Sysmon-based detections now use:
 ```spl
 sourcetype="XmlWinEventLog:Microsoft-Windows-Sysmon/Operational"
+
+ Sysmon forwarding investigated — 
+    inputs.conf, outputs.conf, firewall rules,
+    and permissions all configured correctly.
+    To be resolved in next iteration.
 ```
 
 This ensures we search Sysmon logs
