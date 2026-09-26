@@ -1,8 +1,8 @@
-# Detection 03 — New User Account Created 
+# Detection 03: New User Account Created 
 
 ## Overview
 Detects creation of new user accounts on 
-Windows systems — a common attacker technique 
+Windows systems, a common attacker technique 
 for establishing persistence and backdoor access 
 after initial compromise.
 
@@ -11,8 +11,8 @@ after initial compromise.
 |-------|---------|
 | Detection ID | DET-003 |
 | Severity | High |
-| MITRE ATT&CK | T1136 — Create Account |
-| Event ID | 4720 — User Account Created |
+| MITRE ATT&CK | T1136 - Create Account |
+| Event ID | 4720 - User Account Created |
 | Data Source | Windows Security Log |
 | Author | Nish |
 | Date | September 2026 |
@@ -22,9 +22,9 @@ after initial compromise.
 ## MITRE ATT&CK Mapping
 
 Tactic: Persistence
-Technique: T1136 — Create Account
-Sub-tech: T1136.001 — Local Account
-T1136.002 — Domain Account
+Technique: T1136 - Create Account
+Sub-tech: T1136.001 - Local Account
+T1136.002 - Domain Account
 
 
 ---
@@ -65,7 +65,7 @@ index=main EventCode=4720
 | sort -Time
 ```
 
-### Extended Query — Account Lifecycle
+### Extended Query - Account Lifecycle
 ```spl
 index=main (EventCode=4720 OR EventCode=4722 OR EventCode=4738)
 | eval EventType=case(
@@ -80,7 +80,7 @@ index=main (EventCode=4720 OR EventCode=4722 OR EventCode=4738)
 
 ---
 
-## Lab Test — How Event Was Generated
+## Lab Test - How Event Was Generated
 
 ```powershell
 # Generated on Windows 10 VM
@@ -188,7 +188,7 @@ immediate admin group addition
 ## Recommended Response
 
 LOW confidence (business hours, IT admin):
-└── Verify with IT — likely legitimate
+└── Verify with IT - likely legitimate
 Document and close
 
 MEDIUM confidence (off-hours, unknown creator):
