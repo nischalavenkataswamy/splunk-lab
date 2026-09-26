@@ -1,4 +1,4 @@
-# Detection 03 — New User Account Created 🚨
+# Detection 03 — New User Account Created 
 
 ## Overview
 Detects creation of new user accounts on 
